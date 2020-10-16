@@ -5,6 +5,10 @@ namespace Factory.Models
 {
   public class Engineer
   {
+    public Engineer()
+    {
+      this.Licenses = new HashSet<License>();
+    }
     public int EngineerId { get; set; }
     public string Name { get; set; }
     public string Disc { get; set; }

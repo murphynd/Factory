@@ -38,13 +38,13 @@ namespace Factory.Controllers
       return View(thisMachine);
     }
     [HttpPost]
-    public ActionResult AddEngineer(License License)
+    public ActionResult AddEngineer(License license)
     {
-      if (License.EngineerId != 0)
+      if (license.EngineerId != 0)
       {
-        if (_db.Licenses.Where(x => x.MachineId == License.MachineId && x.EngineerId == License.EngineerId).ToHashSet().Count == 0)
+        if (_db.Licenses.Where(x => x.MachineId == license.MachineId && x.EngineerId == license.EngineerId).ToHashSet().Count == 0)
         {
-          _db.Licenses.Add(License);
+          _db.Licenses.Add(license);
         }
       }
       _db.SaveChanges();
