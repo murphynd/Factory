@@ -1,4 +1,19 @@
 @{
   Layout = "_Layout";
 }
-Machines Details
+@using Factory.Models;
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>@Model.Name Page</h1>
+  </div>
+  @if (Model.Licenses.Count == 0)
+  {
+    <p>@Model.Name has no Engineers working on it.</p>
+  }
+  <ul>
+    @foreach (License license in Model.Licenses)
+    {
+      <li>@license.Engineer.Name - </li>
+    }
+  </ul>
