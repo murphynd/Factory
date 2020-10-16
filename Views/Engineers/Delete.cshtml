@@ -1,4 +1,15 @@
 @{
   Layout = "_Layout";
 }
-Engineers Delete
+
+@model Factory.Models.Engineer
+<div class="container">
+  <div class="jumbotron">
+    <h1>Delete a Engineer</h1>
+  </div>
+  <h3>Are you sure you want to Delete @Html.DisplayFor(model =>model.Name)</h3>
+
+  @using (Html.BeginForm())
+  {
+    <input class="btn btn-outline-dark" type="submit" value="Delete" />
+  }
