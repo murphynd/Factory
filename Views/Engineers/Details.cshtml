@@ -14,12 +14,13 @@
   {
     <p>@Model.Name has no Machines.</p>
   }
-  <ol>
+  <h3>Machine Licenses</h3>
+  <ul>
     @foreach (License license in Model.Licenses)
     {
       <li>@license.Machine.Name</li>
     }
-  </ol>
+  </ul>
 
   @Html.ActionLink("Edit Engineer","Edit", new {id=Model.EngineerId}, new { @class="btn btn-info" })
   @Html.ActionLink("Delete Engineer","Delete",new {id=Model.EngineerId}, new { @class="btn btn-info" })

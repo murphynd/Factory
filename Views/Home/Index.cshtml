@@ -1,6 +1,10 @@
 ﻿@{
     Layout = "_Layout";
 }
+@{
+    ViewBag.Engineer = "Engineer";
+}
+@using Factory.Models;
 <div class="container">
     <div class="jumbotron">
         <h4>Home</h4>
@@ -10,4 +14,16 @@
         <button class="btn btn-outline-dark">@Html.ActionLink("Add New Engineers", "Create","Engineers")</button>
         <button class="btn btn-outline-dark">@Html.ActionLink("Add New Machines", "Create","Machines")</button>
     </div>
+</div>
+<h3>Engineers Working Here</h3>
+<ol>
+    @foreach (Engineer engineer in Model)
+    {
+        <li>@Html.ActionLink(engineer.Name, "Details", "Engineers",new{id=engineer.EngineerId})</li>
+    }
+</ol>
+
+<h3>Machines Running </h3>
+@Html.DropDownList("MachineId")
+
 </div>
