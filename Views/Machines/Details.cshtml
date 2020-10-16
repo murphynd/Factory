@@ -7,6 +7,7 @@
   <div class="jumbotron">
     <h4>Machines</h4>
     <h1>@Model.Name </h1>
+    <small>@Model.Disc</small>
   </div>
   @if (Model.Licenses.Count == 0)
   {
@@ -18,7 +19,7 @@
       <li>@license.Engineer.Name - </li>
     }
   </ul>
-  @Html.ActionLink("Back to Machines","Index", null, new { @class="btn btn-info" })
-  @Html.ActionLink("Edit Machines","Edit", new {id=Model.MachineId}, new { @class="btn btn-info" })
-  @Html.ActionLink("Delete Machines","Delete",new {id=Model.MachineId}, new { @class="btn btn-info" })
+
+  @Html.ActionLink("Edit Machine","Edit", new {id=Model.MachineId}, new { @class="btn btn-info" })
+  @Html.ActionLink("Delete Machine","Delete",new {id=Model.MachineId}, new { @class="btn btn-info" })
 </div>
