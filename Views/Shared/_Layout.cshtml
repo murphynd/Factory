@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Dr. Sillystringz's Factory</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/styles.css">
+    <link rel="stylesheet" href="~/css/site.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="icon" type="image/png" sizes="16x16" href="~/img/favicon-16x16.png">
@@ -18,8 +18,8 @@
         <nav class="navbar fixed-top navbar-light bg-light">
             <a class="navbar-brand" href="\">Dr. Sillystringz's Factory</a>
 
-            <button class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-users"></i>@Html.ActionLink("Engineers", "Index","Engineers")</button>
-            <button class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-cube"></i> @Html.ActionLink("Machines", "Index","Machines")</button>
+            <button class="btn"><i class="fa fa-users"></i>@Html.ActionLink("Engineers", "Index","Engineers")</button>
+            <button class="btn"><i class="fa fa-cube"></i> @Html.ActionLink("Machines", "Index","Machines")</button>
         </nav>
         @RenderBody()
     </div>
