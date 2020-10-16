@@ -31,7 +31,7 @@ namespace Factory.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
-    public ActionResult details(int id)
+    public ActionResult Details(int id)
     {
       Machine model = _db.Machines.FirstOrDefault(x => x.MachineId == id);
       return View(model);
@@ -66,6 +66,19 @@ namespace Factory.Controllers
     {
       var thisMachine = _db.Machines.FirstOrDefault(x => x.MachineId == id);
       _db.Machines.Remove(thisMachine);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+    public ActionResult Edit(int id)
+    {
+      var thisMachine = _db.Machines.FirstOrDefault(machines => machines.MachineId == id);
+      return View(thisMachine);
+    }
+
+    [HttpPost]
+    public ActionResult Edit(Machine machine)
+    {
+      _db.Entry(machine).State = EntityState.Modified;
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
