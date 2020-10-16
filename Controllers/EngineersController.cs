@@ -36,13 +36,11 @@ namespace Factory.Controllers
       Engineer model = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
       return View(model);
     }
-
     public ActionResult Delete(int id)
     {
       var thisEngineer = _db.Engineers.FirstOrDefault(x => x.EngineerId == id);
       return View(thisEngineer);
     }
-
     [HttpPost, ActionName("Delete")]
     public ActionResult DeleteConfirmed(int id)
     {
@@ -56,7 +54,6 @@ namespace Factory.Controllers
       var thisEngineer = _db.Engineers.FirstOrDefault(Engineers => Engineers.EngineerId == id);
       return View(thisEngineer);
     }
-
     [HttpPost]
     public ActionResult Edit(Engineer Engineer)
     {

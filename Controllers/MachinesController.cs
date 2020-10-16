@@ -60,7 +60,6 @@ namespace Factory.Controllers
       var thisMachine = _db.Machines.FirstOrDefault(x => x.MachineId == id);
       return View(thisMachine);
     }
-
     [HttpPost, ActionName("Delete")]
     public ActionResult DeleteConfirmed(int id)
     {
@@ -74,7 +73,6 @@ namespace Factory.Controllers
       var thisMachine = _db.Machines.FirstOrDefault(machines => machines.MachineId == id);
       return View(thisMachine);
     }
-
     [HttpPost]
     public ActionResult Edit(Machine machine)
     {
@@ -82,8 +80,5 @@ namespace Factory.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
-
-
-
   }
 }

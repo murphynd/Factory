@@ -6,7 +6,8 @@
 
 <div class="container">
   <div class="jumbotron">
-    <h1>@Model.Name Page</h1>
+    <h4>Engineer</h4>
+    <h1>@Model.Name </h1>
   </div>
   @if (Model.Licenses.Count == 0)
   {
@@ -18,7 +19,9 @@
       <li>@license.Machine.Name</li>
     }
   </ol>
-
+  @Html.ActionLink("Back to Engineers","Index", null, new { @class="btn btn-info" })
+  @Html.ActionLink("Edit Engineers","Edit", new {id=Model.EngineerId}, new { @class="btn btn-info" })
+  @Html.ActionLink("Delete Engineers","Delete",new {id=Model.EngineerId}, new { @class="btn btn-info" })
 
 
 </div>
