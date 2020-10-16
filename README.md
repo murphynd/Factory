@@ -43,7 +43,7 @@ Machines
 - Details
 - id
 
-EngineersMachines (join table)
+License (join table)
 
 - Machine id
 - engineer id
