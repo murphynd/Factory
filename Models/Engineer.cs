@@ -6,6 +6,6 @@ namespace Factory.Models
     public int EngineerId { get; set; }
     public string Name { get; set; }
     public string Disc { get; set; }
-    public virtual ICollection<PatientDoctor> Licenses { get; set; }
+    public virtual ICollection<License> Licenses { get; set; }
   }
 }

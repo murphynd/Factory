@@ -3,7 +3,7 @@ namespace Factory.Models
 {
   public class FactoryContext : DbContext
   {
-    public DbSet<Patient> Engineers { get; set; }
+    public DbSet<Engineer> Engineers { get; set; }
     public DbSet<Machine> Machines { get; set; }
     public DbSet<License> Licenses { get; set; }
 
