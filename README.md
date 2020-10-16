@@ -1,10 +1,18 @@
+# _Factory_
+
+#### _C# ASP.NET MVC Project for Epicodus, October 16th, 2020_
+
+#### By _**Natalie Murphy**_
+
+## Description
+
 Dr. Sillystringz's Factory
 
 - An application to keep track of their machine repairs.
   MVC web application to manage their engineers, and the machines they are licensed to fix.
   he factory manager should be able to add a list of engineers, a list of machines, and specify which engineers are licensed to repair which machines.
 
-User
+## User
 
 - list of all engineers, and a list of all machines.
 - select a engineer, see their details, and see a list of all machines that engineer is licensed to repair.
@@ -15,22 +23,8 @@ User
 - add or remove machines that a specific engineer is licensed to repair.
 - modify this relationship from the other side, and add or remove engineers from a specific machine.
 
-Homepage
+### Specs
 
-- lists all engineers and machines.
-- click on an individual engineer or machine to see all the engineers/machines that belong to it.
-
-  Naming
-  Note: You must follow the naming conventions for your project. Projects that do not follow these conventions will not be reviewed and will be returned not passing.
-
-Use your first name and last name to name your database in the following way:
-
-Production Database: first_last
-Use the following name for your directory:
-
-Main Project Folder: Factory
-
-<Tables>
 Engineers
 
 - Name
@@ -47,3 +41,42 @@ License (join table)
 
 - Machine id
 - engineer id
+
+## Setup/Installation Requirements
+
+- Download option
+
+  - Download files from GitHub repository by click Code and Download Zip
+  - Extract files into a single directory
+  - Run GitBASH in directory
+  - Type "dotnet restore" to get bin and obj files
+  - Type "dotnet run" in GitBash to run the program
+  - Have fun with Factory! <!-- TITLE HERE -->
+
+- Cloning options
+  - For cloning please use the following GitHub [tutorial](https://docs.github.com/en/enterprise/2.16/user/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+  - Place files into a single directory
+  - Run GitBASH in directory
+  - Type "dotnet restore" to get bin and obj files
+  - Type "dotnet run" in GitBash to run the program
+  - Have fun with Factory! <!-- TITLE HERE -->
+
+## Known Bugs
+
+No Known Bugs
+
+## Technologies Used
+
+Main Programs
+
+- C# / ASP.NET
+- MCV
+
+### Other Links
+
+[GitHub](https://github.com/murphynd)
+
+### License
+
+Copyright (c) 2020 **_{NatalieMurphy}_**
+Licensed under MIT
