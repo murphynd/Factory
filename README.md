@@ -10,7 +10,7 @@ Dr. Sillystringz's Factory
 
 - An application to keep track of their machine repairs.
   MVC web application to manage their engineers, and the machines they are licensed to fix.
-  he factory manager should be able to add a list of engineers, a list of machines, and specify which engineers are licensed to repair which machines.
+- User able to add a list of engineers, a list of machines, and specify which engineers are licensed to repair which machines.
 
 ## User
 
@@ -61,16 +61,43 @@ License (join table)
   - Type "dotnet run" in GitBash to run the program
   - Have fun with Factory! <!-- TITLE HERE -->
 
-## Known Bugs
+## Database Setup
 
-No Known Bugs
+- Go to appsettings.json and change the password if needed.
+
+- Setup with SQL migrations
+
+  - In the terminal, navigate to the project folder
+  - Type "dotnet ef migrations add Initial" and wait for migration file to be built
+  - Type "dotnet ef database update" and wait for build confirmation
+
+- Setup with SQL statements
+
+  - Enter the following code into your SQL database and run.
+
+  ```
+
+  ```
+
+  Setup with SQL Import
+
+- MySQL
+- In the Navigator > Administration window, select Data Import/Restore.
+- In Import Options select Import from Self-Contained File.
+- Navigate to Natalie_Murphy.sql.
+- Under Default Schema to be Imported To, select the New button.
+  - Enter 'Natalie_Murphy' as the name of your database.
+  - Click Ok.
+- Click Start Import.
 
 ## Technologies Used
 
 Main Programs
 
-- C# / ASP.NET
-- MCV
+- C# / ASP.NET Core
+- MVC
+- MySQL
+  -Bootstrap
 
 ### Other Links
 
