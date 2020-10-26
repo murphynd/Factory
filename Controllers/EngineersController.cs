@@ -33,16 +33,16 @@ namespace Factory.Controllers
     }
     public ActionResult AddMachine(int id)
     {
-      Machine thisMachine = _db.Machines.FirstOrDefault(s => s.MachineId == id);
+      Engineer thisEngineer = _db.Engineers.FirstOrDefault(x => x.EngineerId == id);
       ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "Name");
-      return View(thisMachine);
+      return View(thisEngineer);
     }
     [HttpPost]
     public ActionResult AddMachine(License license)
     {
       if (license.MachineId != 0)
       {
-        if (_db.Licenses.Where(x => x.MachineId == license.MachineId && x.MachineId == license.MachineId).ToHashSet().Count == 0)
+        if (_db.Licenses.Where(x => x.EngineerId == license.EngineerId && x.MachineId == license.MachineId).ToHashSet().Count == 0)
         {
           _db.Licenses.Add(license);
         }
@@ -52,7 +52,7 @@ namespace Factory.Controllers
     }
     public ActionResult Details(int id)
     {
-      Engineer model = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
+      Engineer model = _db.Engineers.FirstOrDefault(x => x.EngineerId == id);
       return View(model);
     }
     public ActionResult Delete(int id)
